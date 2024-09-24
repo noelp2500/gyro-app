@@ -34,7 +34,6 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello Dummy, here is your app!</Text>
       <Text style={styles.text}>Gyroscope Data</Text>
       <Text style={styles.text}>x: {x.toFixed(5)}</Text>
       <Text style={styles.text}>y: {y.toFixed(5)}</Text>
