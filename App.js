@@ -5,19 +5,9 @@ import RNSpeedometer from "react-native-speedometer";
 
 const labels = [
   {
-    name: "Too Slow",
-    labelColor: "#ff2900",
-    activeBarColor: "#ff2900",
-  },
-  {
-    name: "Very Slow",
-    labelColor: "#ff5400",
-    activeBarColor: "#ff5400",
-  },
-  {
-    name: "Slow",
-    labelColor: "#f4ab44",
-    activeBarColor: "#f4ab44",
+    name: "Unbelievably Fast",
+    labelColor: "#00ff6b",
+    activeBarColor: "#00ff6b",
   },
   {
     name: "Normal",
@@ -25,14 +15,9 @@ const labels = [
     activeBarColor: "#f2cf1f",
   },
   {
-    name: "Fast",
-    labelColor: "#14eb6e",
-    activeBarColor: "#14eb6e",
-  },
-  {
-    name: "Unbelievably Fast",
-    labelColor: "#00ff6b",
-    activeBarColor: "#00ff6b",
+    name: "Too Slow",
+    labelColor: "#ff2900",
+    activeBarColor: "#ff2900",
   },
 ];
 
@@ -55,12 +40,12 @@ const GyroSpeedometerDisplay = () => {
         <Text style={styles.label}>X-Axis</Text>
         <RNSpeedometer
           labels={labels}
-          value={gyroData.x}
-          maxValue={0.01}
-          minValue={-0.01}
+          value={gyroData.x * 57.29578}
+          maxValue={50}
+          minValue={0}
           allowedDecimals={5}
           size={200}
-          text={`X: ${gyroData.x.toFixed(5)}`}
+          text={`X: ${(gyroData.x * 57.29578).toFixed(5)}`}
         />
       </View>
 
@@ -68,12 +53,12 @@ const GyroSpeedometerDisplay = () => {
         <Text style={styles.label}>Y-Axis</Text>
         <RNSpeedometer
           labels={labels}
-          value={gyroData.y}
-          maxValue={0.01}
-          minValue={-0.01}
+          value={gyroData.y * 57.29578}
+          maxValue={50}
+          minValue={0}
           allowedDecimals={5}
           size={200}
-          text={`Y: ${gyroData.y.toFixed(5)}`}
+          text={`Y: ${(gyroData.y * 57.29578).toFixed(5)}`}
         />
       </View>
 
@@ -81,12 +66,12 @@ const GyroSpeedometerDisplay = () => {
         <Text style={styles.label}>Z-Axis</Text>
         <RNSpeedometer
           labels={labels}
-          value={gyroData.z}
-          maxValue={0.01}
-          minValue={-0.01}
+          value={gyroData.z * 57.29578}
+          maxValue={50}
+          minValue={0}
           allowedDecimals={5}
           size={200}
-          text={`Z: ${gyroData.z.toFixed(5)}`}
+          text={`Z: ${(gyroData.z * 57.29578).toFixed(5)}`}
         />
       </View>
     </View>
